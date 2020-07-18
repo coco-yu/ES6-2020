@@ -31,3 +31,15 @@
     非严格模式下函数直接执行，没有调用者，this是window或者global
     严格模式下函数直接调用、没有调用者，this是null或者undefined
     如果事件绑定的时候， this就是绑定的元素
+
+## call apply bind原理
+    call的原理：
+    (function(prototype) {
+        function call2(context, ...args) {
+            context.getName = this;
+            context.getName(...args);
+            delete context.getName;
+        }
+        prototype.call2 = call2;
+    })(Function.prototyps);
+    getName.call(obj)
