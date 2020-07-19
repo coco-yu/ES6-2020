@@ -53,4 +53,16 @@
     引用类型是若干个属性的集合
 
 ## 私有属性、共有属性
-    私有属性放在this,公共属性放在prototype
+    私有属性放在this,公共属性放在prototype(节约内存、空间)
+
+## __ptoto__, prototype
+    实例没有prototype，有__proto__
+    构造函数有prototype
+    只有函数才有prototype
+    Function.prototype === Function.__proto__
+    Object.prototype.__proto__ === null
+    函数的祖先就是Function
+    对象的祖先是null 
+
+## 为什么要有原型链
+    实现属性和方法的共享
