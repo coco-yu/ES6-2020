@@ -43,3 +43,14 @@
         prototype.call2 = call2;
     })(Function.prototyps);
     getName.call(obj)
+
+## 存放方式
+    基本类型存放在栈里
+    引用类型存放在堆里
+
+## 基本类型喝引用类型的区别
+    基本类型只是一个值
+    引用类型是若干个属性的集合
+
+## 私有属性、共有属性
+    私有属性放在this,公共属性放在prototype
